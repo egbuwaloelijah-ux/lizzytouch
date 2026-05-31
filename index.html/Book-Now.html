@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Masterpiece | Lizzy's Touch</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Embedded CSS to keep your custom page unique and easy to manage */
+        .booking-page-body {
+            background-color: #11162a;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .back-home {
+            align-self: flex-start;
+            margin-bottom: 20px;
+            color: #a5f004;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .back-home:hover {
+            transform: translateX(-5px);
+        }
+        .card {
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      width: 100%;
+      max-width: 480px;
+      padding: 40px 36px 32px;
+      animation: fadeUp 0.45s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .star-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .star-circle {
+      width: 62px; height: 62px;
+      border-radius: 50%;
+      background: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(175, 170, 8, 0.932);
+    }
+    .star-circle svg { width: 32px; height: 32px; fill: #faf7f7; }
+
+
+        /* Elegant High-End Premium Section Border-Radius Box */
+        .booking-card {
+            background: linear-gradient(145deg, #010822, #121729);
+            border: 2px solid rgba(165, 240, 4, 0.25);
+            
+            /* Custom sophisticated nail-tech aesthetic curve */
+            border-radius: 60px 15px 60px 15px; 
+            
+            padding: 50px 40px;
+            max-width: 550px;
+            width: 100%;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+
+        .booking-card h2 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .booking-card p {
+            color: #a2aab8;
+            font-size: 1rem;
+            margin-bottom: 35px;
+        }
+
+        /* Beautiful Form Styling */
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #a5f004;
+            font-weight: bold;
+        }
+
+        .booking-form input, 
+        .booking-form select {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 14px 16px;
+            border-radius: 12px; /* Smooth rounded fields */
+            color: #ffffff;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .booking-form input:focus, 
+        .booking-form select:focus {
+            border-color: #a5f004;
+            background: rgba(165, 240, 4, 0.03);
+            box-shadow: 0 0 10px rgba(165, 240, 4, 0.2);
+        }
+
+        .booking-form select option {
+            background: #181d34;
+            color: #fff;
+        }
+
+        /* Premium Booking Action Button */
+        .submit-btn {
+            background-color: #a5f004;
+            color: #11162a;
+            border: none;
+            padding: 16px;
+            border-radius: 40px; /* Perfectly round pill button */
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(165, 240, 4, 0.25);
+        }
+
+        .submit-btn:hover {
+            background-color: #ffffff;
+            color: #11162a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Catchy Bottom Motto Alert */
+        .form-footer-motto {
+            margin-top: 25px;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.5px;
+        }
+        
+     
+
+
+    
+    </style>
+</head>
+<body class="booking-page-body">
+
+    <a href="index.html" class="back-home">← Back to Home</a>
+    
+
+    <div class="booking-card">
+          <div class="star-wrap">
+      <div class="star-circle">
+        <img src="fingernail-svgrepo-com.svg" alt="fingernail-svgrepo-com" width="50">
+</svg>
+
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01z"/>
+        </svg>
+      </div>
+    </div>
+        <h2>Secure Your Slot</h2>
+        <p>Let's turn your tips into a stunning masterpiece.</p>
+
+        <form class="booking-form" id="bookingForm">
+            <div class="form-group">
+                <label for="fullName">Your Full Name</label>
+                <input type="text" id="fullName" placeholder="e.g., Your name***" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="e.g., + 234 000 000 0000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Select Service</label>
+                <select id="service" required>
+                    <option value="" disabled selected>Choose a luxury service...</option>
+                    <option value="Acrylic Full Set">Acrylic Full Set (Hand-Painted Art)</option>
+                    <option value="Gel Extensions">Gel Extensions Or X (Ultra Glossy)</option>
+                    <option value="Luxury Freestyle">PressOn Set</option>
+                    <option value="Luxury Freestyle">Cortex</option>
+                    <option value="Nail Repair">Quick Fix & Maintenance</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Preferred Date & Time</label>
+                <input type="datetime-local" id="date" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Request Appointment ✨</button>
+        </form>
+
+        <div class="form-footer-motto">
+            "Turning Tips to masterpiece✨"
+        </div>
+    </div>
+
+    
+      <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Stop page refresh
+        
+        // 1. Capture form values using the exact IDs inside your HTML fields
+        const name = document.getElementById('fullName').value;
+        const phone = document.getElementById('phone').value;
+        const service = document.getElementById('service').value;
+        const dateRaw = document.getElementById('date').value;
+    
+
+
+
+
+// Convert and format to a clean string
+let dateFormatted = "";
+if (dateRaw) {
+    const dateObj = new Date(dateRaw);
+    dateFormatted = dateObj.toLocaleString('en-GB', { 
+        day: '2-digit', 
+        month: '2-digit', 
+        year: 'numeric', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        hour12: true 
+    });
+} else {
+    dateFormatted = "Not specified";
+}
+        
+        // 2. Your formatted Nigerian country code number
+        const myWhatsAppNumber = "2349158631557"; 
+        
+    const message = `Hello Lizzy! I would like to book an appointment: ✨💅%0A%0A` +
+`**Name:** ${encodeURIComponent(name)}%0A` +
+`**Phone:** ${encodeURIComponent(phone)}%0A` +
+`**Service:** ${encodeURIComponent(service)}%0A` +
+`**Date & Time:** ${encodeURIComponent(dateFormatted)}%0A`;
+        
+        // 4. Fire open the official API link using your dynamic variables
+        window.open(`https://api.whatsapp.com/send?phone=${myWhatsAppNumber}&text=${message}`, '_blank');
+        
+        // 5. Clean reset the text fields
+        this.reset();
+    });
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(35, 34, 35);  
+  color: rgb(70, 118, 238);
+  line-height: 1.6;
+  animation: fadein 2s;
+}
+
+@keyframes fadein{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+.hero-content{
+     padding-left: 100px;
+     padding-right: 100px;
+     
+     
+}
+/* Container holds everything together */
+.nav-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden; /* Keeps the zoom inside the box */
+    border-bottom: 1px solid #1f2933;
+}
+
+/* The background element that animates */
+.nav-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   background-image: url(/lizzy\ logo\ blue.jpeg);
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    /* This triggers a smooth, continuous zoom loop */
+    animation: kenBurns 12s ease-in-out infinite alternate;
+}
+
+/* Dark overlay to make your menu text pop out cleanly */
+.nav-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 22, 42, 0.6); /* Semi-transparent dark layer */
+    z-index: 2;
+}
+
+/* The actual menu links sitting on top */
+.nav-content-wrapper {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%; /* Clean responsive padding */
+}
+
+.nav-links a {
+    margin-left: 25px;
+    color: #a5f004;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* The Ken Burns Zoom Animation */
+@keyframes kenBurns {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15); /* Subtly zooms in 15% */
+    }
+}
+/* --- Global Main Content Styles --- */
+main {
+    background-color: #11162a; /* Blends beautifully with your dark overlay background */
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* --- Motto Banner --- */
+.motto-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(180deg, rgba(17,22,42,0) 0%, rgba(26,32,58,0.5) 100%);
+}
+.motto-text {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #a5f004; /* Matches your lime/yellow neon menu links */
+    text-shadow: 0 0 15px rgba(165, 240, 4, 0.4);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.sub-motto {
+    font-size: 1.1rem;
+    color: #a2aab8;
+}
+
+/* --- Services Layout --- */
+.services-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-title h3 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.title-line {
+    width: 60px;
+    height: 3px;
+    background-color: #a5f004;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+.service-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px; /* Gorgeous round cards */
+    padding: 40px 30px;
+    width: 300px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    background: rgba(165, 240, 4, 0.05);
+    border-color: #a5f004;
+    box-shadow: 0 10px 30px rgba(165, 240, 4, 0.1);
+}
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.service-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+.service-card p {
+    color: #a2aab8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.price {
+    font-weight: bold;
+    color: #a5f004;
+    font-size: 1.1rem;
+}
+
+/* --- Premium Book Now Box with custom border-radius --- */
+.booking-cta-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.booking-box {
+    background: linear-gradient(135deg, #1f2933 0%, #17162a 100%);
+    border: 2px solid rgba(165, 240, 4, 0.3);
+    
+    /* Elegant modern asymmetry or smooth pill shape */
+    border-radius: 40px 10px 40px 10px; 
+    
+    padding: 50px 40px;
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+.booking-box h4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.booking-box p {
+    color: #a2aab8;
+    margin-bottom: 30px;
+}
+.book-now-btn {
+    display: inline-block;
+    background-color: #a5f004;
+    color: #11162a;
+    padding: 15px 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 50px; /* Fully rounded elegant button */
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(165, 240, 4, 0.3);
+}
+.book-now-btn:hover {
+    background-color: #ffffff;
+    color: #11162a;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+}
+
+/* --- Interactive Booking Modal (Popup) --- */
+.booking-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: #171d34;
+    padding: 40px;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    animation: modalSlide 0.4s ease;
+}
+@keyframes modalSlide {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.close-btn {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #a2aab8;
+    transition: color 0.2s;
+}
+.close-btn:hover {
+    color: #a5f004;
+}
+.modal-content h3 {
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+#appointmentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#appointmentForm input, #appointmentForm select {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 12px 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+#appointmentForm input:focus, #appointmentForm select:focus {
+    border-color: #a5f004;
+}
+#appointmentForm select option {
+    background: #171d34;
+}
+.submit-booking-btn {
+    background: #a5f004;
+    color: #11162a;
+    border: none;
+    padding: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background 0.2s;
+}
+.submit-booking-btn:hover {
+    background: #ffffff;
+}
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    width: 100%;
+    margin: 0;
+    padding: 40px 15px;
+    gap: 15px;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+}
+
+.footer-info-left {
+    flex: 1;
+    font-family: sans-serif;
+    color: #ffffff;
+    min-width: 0;
+}
+
+.footer-info-left h3 {
+    color: #a5f004;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-detail {
+    color: #e0e0e0;
+    font-size: 0.85rem;   /* slightly smaller on mobile */
+    margin: 8px 0;
+}
+
+.copyright {
+    color: #777777;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+/* Map box */
+.footer-map-right {
+    width: 45%;           /* percentage, not fixed px */
+    min-width: 130px;
+    max-width: 350px;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.footer-map-right iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+@keyframes fadein{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
